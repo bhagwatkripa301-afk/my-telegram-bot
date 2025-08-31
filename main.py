@@ -7,12 +7,13 @@ Main entry point for the application
 import logging
 from telegram.ext import Updater, CommandHandler, MessageHandler, CallbackQueryHandler, Filters
 
-from bot.config import Config
-from bot.handlers import (
+# Yahan se "bot." hata diya gaya hai
+from config import Config
+from handlers import (
     start_handler, help_handler, search_handler, callback_handler,
     settings_handler, history_handler, favorites_handler
 )
-from bot.database import Database
+from database import Database
 
 # Configure logging
 logging.basicConfig(
