@@ -4,11 +4,9 @@ Enhanced Telegram Bot for Course Link Finding
 Main entry point for the application
 """
 
-import asyncio
 import logging
-import os
-from telegram.ext import Application, CommandHandler, MessageHandler, CallbackQueryHandler, filters
-from keep_alive import keep_alive
+from telegram.ext import Updater, CommandHandler, MessageHandler, CallbackQueryHandler, Filters
+# keep_alive ki zaroorat nahi hai kyunki Render alag tarike se kaam karta hai
 
 from bot.config import Config
 from bot.handlers import (
@@ -24,65 +22,53 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-async def error_handler(update, context):
-    """Log errors and send user-friendly messages"""
-    logger.error(f"Update {update} caused error {context.error}")
-    
-    if update and update.effective_message:
-        await update.effective_message.reply_text(
-            "⚠️ Something went wrong. Please try again later.\n"
-            "If the problem persists, contact support."
-        )
+def error_handler(update, context):
+    """Log errors"""
+    # Naye version (v20+) mein `update` object None ho sakta hai
+    if update:
+        logger.warning(f'Update "{update}" caused error "{context.error}"')
 
 def main():
     """Main function to start the bot"""
-    keep_alive() # Yahan web server ko start kiya gaya hai
-    
     # Initialize configuration
     config = Config()
     
     # Initialize database
     db = Database()
     
-    # Create application
-    application = Application.builder().token(config.BOT_TOKEN).build()
+    # v13 ke liye Updater ka istemal karein
+    updater = Updater(config.BOT_TOKEN, use_context=True)
     
-    # Add handlers
-    application.add_handler(CommandHandler("start", start_handler))
-    application.add_handler(CommandHandler("help", help_handler))
-    application.add_handler(CommandHandler("settings", settings_handler))
-    application.add_handler(CommandHandler("history", history_handler))
-    application.add_handler(CommandHandler("favorites", favorites_handler))
+    # Dispatcher se handlers register karein
+    dp = updater.dispatcher
     
-    # Message handlers
-    application.add_handler(MessageHandler(
-        filters.TEXT & ~filters.COMMAND, 
+    # Handlers jodein
+    dp.add_handler(CommandHandler("start", start_handler))
+    dp.add_handler(CommandHandler("help", help_handler))
+    dp.add_handler(CommandHandler("settings", settings_handler))
+    dp.add_handler(CommandHandler("history", history_handler))
+    dp.add_handler(CommandHandler("favorites", favorites_handler))
+    
+    # Message handlers (Filters.text & ~Filters.command v13 ke liye)
+    dp.add_handler(MessageHandler(
+        Filters.text & ~Filters.command, 
         search_handler
     ))
     
-    # Callback query handler for inline keyboards
-    application.add_handler(CallbackQueryHandler(callback_handler))
+    # Callback query handler
+    dp.add_handler(CallbackQueryHandler(callback_handler))
     
     # Error handler
-    application.add_error_handler(error_handler)
+    dp.add_error_handler(error_handler)
     
-    # Start the bot
+    # Bot start karein
     logger.info("🚀 Enhanced Course Bot is starting...")
     print("🤖 Bot is running... Press Ctrl+C to stop")
     
-    try:
-        # NOTE: Removed the unsupported `read_timeout` and `write_timeout`
-        application.run_polling(
-            poll_interval=1.0,
-            timeout=10,
-            bootstrap_retries=3,
-        )
-    except KeyboardInterrupt:
-        logger.info("Bot stopped by user")
-    except Exception as e:
-        logger.error(f"Bot crashed: {e}")
-    finally:
-        logger.info("Bot shutdown complete")
+    updater.start_polling()
+    updater.idle()
 
 if __name__ == '__main__':
     main()
+
+
