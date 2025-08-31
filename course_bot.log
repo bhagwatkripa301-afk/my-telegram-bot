@@ -1,5 +1,27 @@
-2025-08-31 09:05:15,024 - CourseBotLogger - ERROR - Channel @winclashplay check karte waqt error: Chat_admin_required
-2025-08-31 09:06:57,310 - CourseBotLogger - ERROR - Channel @winclashplay check karte waqt error: Chat_admin_required
-2025-08-31 09:07:17,903 - CourseBotLogger - ERROR - Channel @winclashplay check karte waqt error: Chat_admin_required
-2025-08-31 09:07:34,750 - CourseBotLogger - ERROR - Channel @winclashplay check karte waqt error: Chat_admin_required
-2025-08-31 09:09:35,322 - CourseBotLogger - ERROR - Channel @winclashplay check karte waqt error: Chat_admin_required
+2025-08-30 19:56:27,671 - CourseBotLogger - INFO - Bot shuru ho gaya hai...
+2025-08-30 19:56:55,605 - CourseBotLogger - ERROR - Channel @winclashplaykar0 check karte waqt error: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: member list is inaccessible
+2025-08-30 19:56:56,225 - CourseBotLogger - ERROR - Channel @winclashplay check karte waqt error: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: CHAT_ADMIN_REQUIRED
+2025-08-30 19:56:56,894 - CourseBotLogger - ERROR - Error: Channel '-1002712519615' nahi mila. Kya bot is channel ka member hai?
+2025-08-30 19:56:59,171 - CourseBotLogger - ERROR - Invite link banate waqt error for -1002712519615: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+2025-08-30 19:57:23,063 - CourseBotLogger - ERROR - Channel @winclashplaykar0 check karte waqt error: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: member list is inaccessible
+2025-08-30 19:57:24,225 - CourseBotLogger - ERROR - Channel @winclashplay check karte waqt error: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: CHAT_ADMIN_REQUIRED
+2025-08-30 19:57:24,683 - CourseBotLogger - ERROR - Error: Channel '-1002712519615' nahi mila. Kya bot is channel ka member hai?
+2025-08-30 19:57:34,674 - CourseBotLogger - ERROR - Channel @winclashplaykar0 check karte waqt error: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: member list is inaccessible
+2025-08-30 19:57:35,123 - CourseBotLogger - ERROR - Channel @winclashplay check karte waqt error: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: CHAT_ADMIN_REQUIRED
+2025-08-30 19:57:35,580 - CourseBotLogger - ERROR - Error: Channel '-1002712519615' nahi mila. Kya bot is channel ka member hai?
+2025-08-30 19:57:37,458 - CourseBotLogger - ERROR - Invite link banate waqt error for -1002712519615: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+2025-08-30 19:58:41,014 - CourseBotLogger - ERROR - Channel @winclashplaykar0 check karte waqt error: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: member list is inaccessible
+2025-08-30 19:58:41,469 - CourseBotLogger - ERROR - Channel @winclashplay check karte waqt error: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: CHAT_ADMIN_REQUIRED
+2025-08-30 19:58:42,663 - CourseBotLogger - ERROR - Error: Channel '-1002712519615' nahi mila. Kya bot is channel ka member hai?
+2025-08-30 19:58:44,902 - CourseBotLogger - ERROR - Invite link banate waqt error for -1002712519615: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+2025-08-30 19:58:44,903 - CourseBotLogger - ERROR - Channel @winclashplaykar0 check karte waqt error: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: member list is inaccessible
+2025-08-30 19:58:45,353 - CourseBotLogger - ERROR - Channel @winclashplay check karte waqt error: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: CHAT_ADMIN_REQUIRED
+2025-08-30 19:58:45,887 - CourseBotLogger - ERROR - Error: Channel '-1002712519615' nahi mila. Kya bot is channel ka member hai?
+2025-08-30 19:58:47,477 - CourseBotLogger - ERROR - Invite link banate waqt error for -1002712519615: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: chat not found
+2025-08-30 20:01:01,797 - CourseBotLogger - ERROR - Channel @winclashplaykar0 check karte waqt error: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: member list is inaccessible
+2025-08-30 20:01:02,246 - CourseBotLogger - ERROR - Channel @winclashplay check karte waqt error: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: CHAT_ADMIN_REQUIRED
+2025-08-30 20:01:15,089 - CourseBotLogger - ERROR - Channel @winclashplaykar0 check karte waqt error: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: member list is inaccessible
+2025-08-30 20:01:15,548 - CourseBotLogger - ERROR - Channel @winclashplay check karte waqt error: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: CHAT_ADMIN_REQUIRED
+2025-08-30 20:01:42,584 - CourseBotLogger - ERROR - Channel @winclashplaykar0 check karte waqt error: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: member list is inaccessible
+2025-08-30 20:01:43,040 - CourseBotLogger - ERROR - Channel @winclashplay check karte waqt error: A request to the Telegram API was unsuccessful. Error code: 400. Description: Bad Request: CHAT_ADMIN_REQUIRED
+2025-08-30 20:07:21,162 - CourseBotLogger - INFO - Bot shuru ho gaya hai...
