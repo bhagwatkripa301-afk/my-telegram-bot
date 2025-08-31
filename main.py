@@ -3,10 +3,13 @@
 Enhanced Telegram Bot for Course Link Finding
 Main entry point for the application
 """
+import sys
+import os
+# Python ko batayein ki is folder mein bhi modules dhoondhne hain
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 import logging
 from telegram.ext import Updater, CommandHandler, MessageHandler, CallbackQueryHandler, Filters
-# keep_alive ki zaroorat nahi hai kyunki Render alag tarike se kaam karta hai
 
 from bot.config import Config
 from bot.handlers import (
@@ -24,7 +27,6 @@ logger = logging.getLogger(__name__)
 
 def error_handler(update, context):
     """Log errors"""
-    # Naye version (v20+) mein `update` object None ho sakta hai
     if update:
         logger.warning(f'Update "{update}" caused error "{context.error}"')
 
@@ -70,5 +72,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-
 
