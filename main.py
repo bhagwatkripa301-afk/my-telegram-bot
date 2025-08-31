@@ -3,17 +3,20 @@
 Enhanced Telegram Bot for Course Link Finding
 Main entry point for the application
 """
+import sys
+import os
+# Python ko batayein ki is folder mein bhi modules dhoondhne hain
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 import logging
 from telegram.ext import Updater, CommandHandler, MessageHandler, CallbackQueryHandler, Filters
 
-# Yahan se "bot." hata diya gaya hai
-from config import Config
 from handlers import (
     start_handler, help_handler, search_handler, callback_handler,
     settings_handler, history_handler, favorites_handler
 )
 from database import Database
+from config import Config
 
 # Configure logging
 logging.basicConfig(
